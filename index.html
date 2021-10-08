@@ -12,10 +12,13 @@
     <!-- Main Template CSS File -->
     <link rel="stylesheet" href="css/kasper.css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" /> -->
   </head>
   <body>
+    <!-- start setting box -->
+
+    <!-- end setting box -->
     <!-- Start Header -->
     <header>
       <div class="container">
@@ -24,23 +27,35 @@
         </a>
         <nav>
           <i class="fas fa-bars toggle-menu"></i>
-          <ul>
-            <li><a class="active" href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul class="links">
+            <li><a class="active" href="#" data-scroll="landing">Home</a></li>
+            <li><a href="#" data-scroll="services">Services</a></li>
+            <li><a href="#" data-scroll="portfolio">Portfolio</a></li>
+            <li><a href="#" data-scroll="about">About</a></li>
+            <li><a href="#" data-scroll="pricing">Pricing</a></li>
+            <li><a href="#" data-scroll="contact">Contact</a></li>
           </ul>
           <div class="form">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search settings"></i>
+            <div class="setting-box">
+              <h3>Colors</h3>
+              <div class="colors">
+                <ul class="colors-list">
+                  <li class="active" data-color="#2196f3" style="background-color: #2196f3"></li>
+                  <li data-color="#673ab7" style="background-color: #673ab7"></li>
+                  <li data-color="#f44336" style="background-color: #f44336"></li>
+                  <li data-color="#ff9800" style="background-color: #ff9800"></li>
+                  <li data-color="#e91e63" style="background-color: #e91e63"></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
     </header>
     <!-- End Header -->
     <!-- Start Landing -->
-    <div class="landing">
+    <div class="landing" id="landing">
       <div class="overlay"></div>
       <div class="text">
         <div class="content">
@@ -55,17 +70,17 @@
           </p>
         </div>
       </div>
-      <i class="fas fa-angle-left change-background fa-2x"></i>
-      <i class="fas fa-angle-right change-background fa-2x"></i>
-      <ul class="bullets">
+      <i class="fas fa-angle-left change-background fa-2x left"></i>
+      <i class="fas fa-angle-right change-background fa-2x right"></i>
+      <!-- <ul class="bullets">
         <li></li>
         <li class="active"></li>
         <li></li>
-      </ul>
+      </ul> -->
     </div>
     <!-- End Landing -->
     <!-- Start Services -->
-    <div class="services">
+    <div class="services" id="services">
       <div class="container">
         <div class="main-heading">
           <h2>Services</h2>
@@ -136,7 +151,7 @@
     </div>
     <!-- End Design -->
     <!-- Start Portfolio -->
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
         <div class="main-heading">
           <h2>Portfolio</h2>
@@ -227,7 +242,7 @@
     </div>
     <!-- End Video -->
     <!-- Start About -->
-    <div class="about">
+    <div class="about" id="about">
       <div class="container">
         <div class="main-heading">
           <h2>About Us</h2>
@@ -300,25 +315,25 @@
           <div class="progress">
             ADOBE
             <div class="prog-bar">
-              <span style="width: 90%" data-progress="90%"></span>
+              <span data-progress="90%"></span>
             </div>
           </div>
           <div class="progress">
             HTML & CSS
             <div class="prog-bar">
-              <span style="width: 85%" data-progress="85%"></span>
+              <span  data-progress="85%"></span>
             </div>
           </div>
           <div class="progress">
             JAVASCRIPT
             <div class="prog-bar">
-              <span style="width: 80%" data-progress="80%"></span>
+              <span data-progress="80%"></span>
             </div>
           </div>
           <div class="progress">
             PHP
             <div class="prog-bar">
-              <span style="width: 90%" data-progress="90%"></span>
+              <span data-progress="90%"></span>
             </div>
           </div>
         </div>
@@ -334,7 +349,7 @@
     </div>
     <!-- end photo -->
     <!-- start pricing -->
-    <div class="pricing">
+    <div class="pricing" id="pricing">
       <div class="container">
         <div class="main-heading">
           <h2>PRICING</h2>
@@ -359,6 +374,7 @@
                 <li>Feature</li>
               </ul>
             </div>
+            <a class="ripple-btn">Buy Now</a>
             <button type="button" name="button">Buy Now</button>
           </div>
           <div class="price">
@@ -433,7 +449,7 @@
     </div>
     <!-- end email -->
     <!-- contact us  -->
-    <div class="contact">
+    <div class="contact" id="contact">
       <div class="container">
         <div class="main-heading">
           <h2>Contact Us</h2>
@@ -484,5 +500,12 @@
       </div>
     </div>
     <!-- End Footer -->
+    <!-- scroll to Top  -->
+    <a href="#" class="scroll-top">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </a>
+    <!-- scroll to top -->
+    <script src="jquery-3.6.0.min.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
